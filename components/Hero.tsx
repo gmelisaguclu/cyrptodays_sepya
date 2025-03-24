@@ -104,7 +104,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-16 md:pt-20">
+    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-10 md:pt-5">
       {/* Arka plan canvas */}
       <canvas
         ref={canvasRef}
@@ -113,7 +113,7 @@ const Hero = () => {
       />
 
       {/* İçerik */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-10">
         <div className="text-left">
           <div className="space-y-4">
             <h2 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-wider">
