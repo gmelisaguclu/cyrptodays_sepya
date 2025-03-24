@@ -68,7 +68,7 @@ const Header = () => {
               PARTNERS
             </Link>
             <Link
-              href="/#team"
+              href="/team"
               className="text-white hover:text-[#00ff9d] transition-colors text-sm lg:text-base"
             >
               TEAM
@@ -157,7 +157,7 @@ const Header = () => {
               PARTNERS
             </Link>
             <Link
-              href="/#team"
+              href="/team"
               className="text-white hover:text-[#00ff9d] transition-colors py-3 border-b border-gray-800"
               onClick={() => setMenuOpen(false)}
             >

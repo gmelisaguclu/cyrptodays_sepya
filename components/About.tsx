@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
-import Link from "next/link";
+
 import { motion } from "framer-motion";
 import links from "@/lib/links";
 
