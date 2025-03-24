@@ -134,7 +134,10 @@ const Partners = () => {
   }, []);
 
   return (
-    <section className="relative pt-16 md:pt-20 pb-16 md:pb-24 overflow-hidden min-h-screen">
+    <section
+      id="partners"
+      className="relative pt-16 md:pt-20 pb-16 md:pb-24 overflow-hidden min-h-screen"
+    >
       {/* Arka plan canvas - siyah gradient ile */}
       <canvas
         ref={canvasRef}

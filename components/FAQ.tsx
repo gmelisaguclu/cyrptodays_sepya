@@ -127,7 +127,10 @@ const FAQ = () => {
   };
 
   return (
-    <section className="relative pt-16 md:pt-20 pb-16 md:pb-24 overflow-hidden min-h-screen">
+    <section
+      id="faq"
+      className="relative pt-16 md:pt-20 pb-16 md:pb-24 overflow-hidden min-h-screen"
+    >
       {/* Animasyonlu Arkaplan */}
       <canvas
         ref={canvasRef}

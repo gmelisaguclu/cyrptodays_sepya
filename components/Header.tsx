@@ -16,10 +16,10 @@ const Header = () => {
       <div className="px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="relative w-[120px] sm:w-[150px] h-[40px] sm:h-[50px]">
+          <div className="relative w-[180px] sm:w-[150px] h-[40px] sm:h-[50px]">
             <Image
               src="/images/sepya-logo.png"
-              alt="Sepya Network Logo"
+              alt="Sepya  Logo"
               fill
               className="object-contain"
               priority
@@ -29,13 +29,13 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center justify-center gap-6 lg:gap-10">
             <Link
-              href="/speakers"
+              href="/#speakers"
               className="text-white hover:text-[#00ff9d] transition-colors text-sm lg:text-base"
             >
               SPEAKERS
             </Link>
             <Link
-              href="/partners"
+              href="/#partners"
               className="text-white hover:text-[#00ff9d] transition-colors text-sm lg:text-base"
             >
               PARTNERS
@@ -56,7 +56,7 @@ const Header = () => {
 
           {/* Desktop Button - Sadece masaüstünde görünecek */}
           <button className="hidden md:block bg-gradient-to-r from-[#00ff9d] to-[#00f0ff] text-black font-semibold px-4 lg:px-6 py-2 rounded-full text-sm lg:text-base hover:scale-105 transition-transform">
-            Become Partner
+            Join the Event
           </button>
 
           {/* Mobile Menu Button */}
@@ -105,14 +105,14 @@ const Header = () => {
         <div className="md:hidden bg-black bg-opacity-95 border-t border-gray-800">
           <nav className="flex flex-col py-4 px-4">
             <Link
-              href="/speakers"
+              href="/#speakers"
               className="text-white hover:text-[#00ff9d] transition-colors py-3 border-b border-gray-800"
               onClick={() => setMenuOpen(false)}
             >
               SPEAKERS
             </Link>
             <Link
-              href="/partners"
+              href="/#partners"
               className="text-white hover:text-[#00ff9d] transition-colors py-3 border-b border-gray-800"
               onClick={() => setMenuOpen(false)}
             >

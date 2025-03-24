@@ -178,7 +178,10 @@ const About = () => {
   };
 
   return (
-    <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 overflow-hidden bg-black">
+    <section
+      id="about"
+      className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 overflow-hidden bg-black"
+    >
       {/* Animasyonlu Arkaplan */}
       <canvas
         ref={canvasRef}
