@@ -2,6 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import links from "@/lib/links";
 
 const Partners = () => {
   // Referans yılı (isteğe bağlı olarak değiştirilebilir)
@@ -40,6 +42,56 @@ const Partners = () => {
       name: "Diamond Sponsor 4",
       logo: null,
       // logo: "/images/sponsors/diamond-4.png", // Logo ekleneceği zaman
+    },
+  ];
+
+  // Gold sponsorlar (3 adet)
+  const goldSponsors = [
+    {
+      id: "gold-1",
+      name: "Gold Sponsor 1",
+      logo: null,
+      // logo: "/images/sponsors/gold-1.png", // Logo ekleneceği zaman
+    },
+    {
+      id: "gold-2",
+      name: "Gold Sponsor 2",
+      logo: null,
+      // logo: "/images/sponsors/gold-2.png", // Logo ekleneceği zaman
+    },
+    {
+      id: "gold-3",
+      name: "Gold Sponsor 3",
+      logo: null,
+      // logo: "/images/sponsors/gold-3.png", // Logo ekleneceği zaman
+    },
+  ];
+
+  // Silver sponsorlar (4 adet)
+  const silverSponsors = [
+    {
+      id: "silver-1",
+      name: "Silver Sponsor 1",
+      logo: null,
+      // logo: "/images/sponsors/silver-1.png", // Logo ekleneceği zaman
+    },
+    {
+      id: "silver-2",
+      name: "Silver Sponsor 2",
+      logo: null,
+      // logo: "/images/sponsors/silver-2.png", // Logo ekleneceği zaman
+    },
+    {
+      id: "silver-3",
+      name: "Silver Sponsor 3",
+      logo: null,
+      // logo: "/images/sponsors/silver-3.png", // Logo ekleneceği zaman
+    },
+    {
+      id: "silver-4",
+      name: "Silver Sponsor 4",
+      logo: null,
+      // logo: "/images/sponsors/silver-4.png", // Logo ekleneceği zaman
     },
   ];
 
@@ -150,7 +202,7 @@ const Partners = () => {
       {/* Partners İçeriği */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#00ff9d] mb-4">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#00ff9d] to-[#00f0ff] mb-4">
             {year} PARTNERS
           </h2>
           <p className="text-gray-400 text-base sm:text-lg md:text-xl max-w-3xl mx-auto">
@@ -161,10 +213,10 @@ const Partners = () => {
 
         {/* Main Sponsor */}
         <div className="mt-12 md:mt-20">
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white text-center mb-8">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#00ff9d] to-[#00f0ff] text-center mb-8">
             Main Sponsor
           </h3>
-          <div className="border border-gray-800 hover:border-[#00f0ff] rounded-xl p-8 md:p-12 lg:p-16 bg-black bg-opacity-60 backdrop-blur-sm transition-colors">
+          <div className="border border-gray-800 rounded-xl p-8 md:p-12 lg:p-16 bg-black bg-opacity-60 backdrop-blur-sm transition-transform hover:scale-[1.02] duration-300">
             <div className="flex items-center justify-center h-40 sm:h-48 md:h-60">
               {mainSponsor.logo ? (
                 <Image
@@ -175,7 +227,7 @@ const Partners = () => {
                   className="max-h-full w-auto object-contain"
                 />
               ) : (
-                <div className="border border-dashed border-gray-700 rounded-lg h-full w-full flex items-center justify-center group-hover:border-[#00f0ff]">
+                <div className="border border-dashed border-gray-700 rounded-lg h-full w-full flex items-center justify-center">
                   <span className="text-gray-600">Logo gelecek</span>
                 </div>
               )}
@@ -185,14 +237,14 @@ const Partners = () => {
 
         {/* Diamond Sponsors */}
         <div className="mt-16 md:mt-24">
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white text-center mb-8">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#00ff9d] to-[#00f0ff] text-center mb-8">
             Diamond Sponsors
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
             {diamondSponsors.map((sponsor) => (
               <div
                 key={sponsor.id}
-                className="border border-gray-800 hover:border-[#00f0ff] rounded-xl p-6 md:p-8 bg-black bg-opacity-60 backdrop-blur-sm transition-colors group"
+                className="border border-gray-800 rounded-xl p-6 md:p-8 bg-black bg-opacity-60 backdrop-blur-sm transition-transform hover:scale-[1.02] duration-300 group"
               >
                 <div className="flex items-center justify-center h-28 sm:h-32 md:h-40">
                   {sponsor.logo ? (
@@ -204,7 +256,69 @@ const Partners = () => {
                       className="max-h-full w-auto object-contain"
                     />
                   ) : (
-                    <div className="border border-dashed border-gray-700 rounded-lg h-full w-full flex items-center justify-center group-hover:border-[#00f0ff]">
+                    <div className="border border-dashed border-gray-700 rounded-lg h-full w-full flex items-center justify-center">
+                      <span className="text-gray-600">Logo gelecek</span>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Gold Sponsors */}
+        <div className="mt-16 md:mt-24">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#00ff9d] to-[#00f0ff] text-center mb-8">
+            Gold Sponsors
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+            {goldSponsors.map((sponsor) => (
+              <div
+                key={sponsor.id}
+                className="border border-gray-800 rounded-xl p-6 md:p-8 bg-black bg-opacity-60 backdrop-blur-sm transition-transform hover:scale-[1.02] duration-300 group"
+              >
+                <div className="flex items-center justify-center h-24 sm:h-28 md:h-32">
+                  {sponsor.logo ? (
+                    <Image
+                      src={sponsor.logo}
+                      alt={sponsor.name}
+                      width={150}
+                      height={75}
+                      className="max-h-full w-auto object-contain"
+                    />
+                  ) : (
+                    <div className="border border-dashed border-gray-700 rounded-lg h-full w-full flex items-center justify-center">
+                      <span className="text-gray-600">Logo gelecek</span>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Silver Sponsors */}
+        <div className="mt-16 md:mt-24">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#00ff9d] to-[#00f0ff] text-center mb-8">
+            Silver Sponsors
+          </h3>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+            {silverSponsors.map((sponsor) => (
+              <div
+                key={sponsor.id}
+                className="border border-gray-800 rounded-xl p-4 md:p-6 bg-black bg-opacity-60 backdrop-blur-sm transition-transform hover:scale-[1.02] duration-300 group"
+              >
+                <div className="flex items-center justify-center h-20 sm:h-24 md:h-28">
+                  {sponsor.logo ? (
+                    <Image
+                      src={sponsor.logo}
+                      alt={sponsor.name}
+                      width={120}
+                      height={60}
+                      className="max-h-full w-auto object-contain"
+                    />
+                  ) : (
+                    <div className="border border-dashed border-gray-700 rounded-lg h-full w-full flex items-center justify-center">
                       <span className="text-gray-600">Logo gelecek</span>
                     </div>
                   )}
@@ -216,9 +330,13 @@ const Partners = () => {
 
         {/* Become a Partner Button */}
         <div className="mt-16 md:mt-24 text-center">
-          <button className="bg-gradient-to-r from-[#00ff9d] to-[#00f0ff] text-black font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg hover:scale-105 transition-transform">
+          <Link
+            href={links.becomePartner}
+            target="_blank"
+            className="inline-block bg-gradient-to-r from-[#00ff9d] to-[#00f0ff] text-black font-semibold px-6 py-3 rounded-xl text-base sm:text-lg hover:scale-105 transition-transform"
+          >
             Become a Partner
-          </button>
+          </Link>
         </div>
       </div>
     </section>

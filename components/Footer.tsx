@@ -44,12 +44,12 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {/* Logo ve Açıklama */}
           <div className="col-span-2 md:col-span-1">
-            <div className="relative w-[220px] h-[70px] mb-4">
+            <div className="relative w-[320px] h-[120px] mb-4 md:ml-0 ml-[-15px]">
               <Image
-                src="/images/crypto_days.png"
+                src="/images/crypto-days.png"
                 alt="Crypto Days Logo"
                 fill
-                className="object-contain"
+                className="object-contain object-left"
               />
             </div>
             {/* <p className="text-gray-400 text-sm">

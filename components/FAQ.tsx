@@ -138,7 +138,7 @@ const FAQ = () => {
       {/* FAQ İçeriği */}
       <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#00ff9d] mb-4">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#00ff9d] to-[#00f0ff] mb-4">
             FAQ
           </h2>
           <p className="text-gray-400 text-base sm:text-lg md:text-xl max-w-2xl mx-auto">

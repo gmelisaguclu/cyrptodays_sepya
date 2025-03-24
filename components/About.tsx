@@ -203,7 +203,7 @@ const About = () => {
         <div className="flex flex-col md:flex-row items-start gap-4 sm:gap-6 md:gap-8">
           <motion.h2
             variants={itemVariants}
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#00ff9d] md:w-1/4 tracking-wider"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#00ff9d] to-[#00f0ff] md:w-1/4 tracking-wider"
           >
             ABOUT
           </motion.h2>
@@ -230,7 +230,7 @@ const About = () => {
               key={card.id}
               variants={itemVariants}
               whileHover={{ scale: 1.02 }}
-              className="relative overflow-hidden rounded-xl h-60 sm:h-72 md:h-80 group border border-gray-800 hover:border-[#00f0ff] transition-all duration-500"
+              className="relative overflow-hidden rounded-xl h-60 sm:h-72 md:h-80 group border border-gray-800 transition-all duration-500"
             >
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10" />
 
@@ -248,18 +248,10 @@ const About = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 z-20"
               >
-                <h3 className="text-white text-xl sm:text-2xl font-semibold group-hover:text-[#00ff9d] transition-colors">
+                <h3 className="text-white text-xl sm:text-2xl font-semibold">
                   {card.title}
                 </h3>
               </motion.div>
-
-              {/* Neon glow effect on hover */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 0.2 }}
-                transition={{ duration: 0.3 }}
-                className="absolute inset-0 bg-[#00f0ff] blur-xl z-5"
-              />
             </motion.div>
           ))}
         </div>

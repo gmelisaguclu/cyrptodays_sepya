@@ -311,7 +311,7 @@ const Team = () => {
             {teamMembers.map((member) => (
               <div
                 key={member.id}
-                className="border border-gray-800 hover:border-white rounded-xl bg-black bg-opacity-60 backdrop-blur-sm transition-all duration-300 group hover:-translate-y-2 relative"
+                className="border border-gray-800 rounded-xl bg-black bg-opacity-60 backdrop-blur-sm transition-transform duration-300 group hover:scale-[1.02] relative"
               >
                 <div className="aspect-[4/5] relative overflow-hidden rounded-t-xl bg-gray-900">
                   {member.image ? (
