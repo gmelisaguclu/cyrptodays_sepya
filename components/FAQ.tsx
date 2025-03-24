@@ -6,6 +6,38 @@ const FAQ = () => {
   // Canvas referansı
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
+  // Soru listesi
+  const questions = [
+    {
+      id: "q1",
+      question: "When and where will Blockchain Days 2025 take place?",
+      answer:
+        "Blockchain Days 2025 will be held in Ankara, Turkey at the prestigious Middle East Technical University (METU) Conference Center. The event is scheduled for May 15-16, 2025.",
+    },
+    {
+      id: "q2",
+      question: "What else will be happening besides panels at the event?",
+      answer:
+        "Beyond the panels, attendees can look forward to interactive workshops, networking sessions, startup pitches, and hands-on blockchain development tutorials. We'll also feature a blockchain hackathon and NFT exhibition.",
+    },
+    {
+      id: "q3",
+      question:
+        "I don't live in Ankara, and I cannot attend the event in person. Can I watch the event live or later?",
+      answer:
+        "Yes! We offer comprehensive virtual attendance options. All main stage presentations and selected workshops will be livestreamed. Additionally, recordings will be available post-event for ticket holders.",
+    },
+  ];
+
+  // Her sorunun açık/kapalı durumunu takip eden state - varsayılan olarak hepsi kapalı
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  // Soru açma/kapama fonksiyonu
+  const toggleQuestion = (index: number) => {
+    console.log(index, "index");
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -90,42 +122,6 @@ const FAQ = () => {
     };
   }, []);
 
-  // Her sorunun açık/kapalı durumunu takip eden state
-  const [openQuestions, setOpenQuestions] = useState<{
-    [key: string]: boolean;
-  }>({});
-
-  // Soru listesi
-  const questions = [
-    {
-      id: "q1",
-      question: "When and where will Blockchain Days 2025 take place?",
-      answer:
-        "Blockchain Days 2025 will be held in Ankara, Turkey at the prestigious Middle East Technical University (METU) Conference Center. The event is scheduled for May 15-16, 2025.",
-    },
-    {
-      id: "q2",
-      question: "What else will be happening besides panels at the event?",
-      answer:
-        "Beyond the panels, attendees can look forward to interactive workshops, networking sessions, startup pitches, and hands-on blockchain development tutorials. We'll also feature a blockchain hackathon and NFT exhibition.",
-    },
-    {
-      id: "q3",
-      question:
-        "I don't live in Ankara, and I cannot attend the event in person. Can I watch the event live or later?",
-      answer:
-        "Yes! We offer comprehensive virtual attendance options. All main stage presentations and selected workshops will be livestreamed. Additionally, recordings will be available post-event for ticket holders.",
-    },
-  ];
-
-  // Soru açma/kapama fonksiyonu
-  const toggleQuestion = (id: string) => {
-    setOpenQuestions((prev) => ({
-      ...prev,
-      [id]: !prev[id],
-    }));
-  };
-
   return (
     <section
       id="faq"
@@ -153,22 +149,24 @@ const FAQ = () => {
 
         {/* Sorular Listesi */}
         <div className="space-y-4">
-          {questions.map((q) => (
+          {questions.map((q, index) => (
             <div
               key={q.id}
               className="border border-gray-800 hover:border-[#00f0ff] rounded-xl bg-black bg-opacity-60 backdrop-blur-sm transition-all duration-300 overflow-hidden relative group"
             >
               {/* Soru Başlığı */}
               <button
-                onClick={() => toggleQuestion(q.id)}
-                className="w-full text-left p-5 md:p-6 flex items-center justify-between focus:outline-none"
+                onClick={() => toggleQuestion(index)}
+                className="w-full text-left p-5 md:p-6 flex items-center justify-between focus:outline-none group-[.active]:border-[#00f0ff] cursor-pointer relative z-10"
+                aria-expanded={activeIndex === index}
+                aria-controls={`answer-${q.id}`}
               >
                 <span className="text-white text-base sm:text-lg font-medium pr-8 group-hover:text-[#00ff9d] transition-colors">
                   {q.question}
                 </span>
                 <span
                   className={`transform transition-transform duration-300 text-[#00f0ff] ${
-                    openQuestions[q.id] ? "rotate-180" : ""
+                    activeIndex === index ? "rotate-180" : ""
                   }`}
                 >
                   ▼
@@ -177,8 +175,9 @@ const FAQ = () => {
 
               {/* Cevap */}
               <div
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  openQuestions[q.id] ? "max-h-96" : "max-h-0"
+                id={`answer-${q.id}`}
+                className={`transition-all duration-300 ease-in-out relative z-10 ${
+                  activeIndex === index ? "block" : "hidden"
                 }`}
               >
                 <div className="p-5 md:p-6 text-gray-400 text-sm sm:text-base border-t border-gray-800">
@@ -187,7 +186,7 @@ const FAQ = () => {
               </div>
 
               {/* Neon glow effect on hover */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-5 bg-[#00f0ff] blur-xl transition-opacity rounded-xl"></div>
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-5 bg-[#00f0ff] blur-xl transition-opacity rounded-xl pointer-events-none"></div>
             </div>
           ))}
         </div>
