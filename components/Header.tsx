@@ -1,15 +1,41 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  // Dışa tıklama işleyicisi
+  useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      // Tıklanan element menu veya menu butonu değilse menüyü kapat
+      if (
+        menuOpen &&
+        menuRef.current &&
+        buttonRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        !buttonRef.current.contains(event.target as Node)
+      ) {
+        setMenuOpen(false);
+      }
+    };
+
+    // Olay dinleyicisi ekle
+    document.addEventListener("mousedown", handleOutsideClick);
+
+    // Temizlik fonksiyonu
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [menuOpen]);
 
   return (
     <header className="fixed w-full top-0 left-0 right-0 z-50 bg-black bg-opacity-90 backdrop-blur-sm">
@@ -61,6 +87,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
+            ref={buttonRef}
             className="md:hidden text-white p-2 focus:outline-none"
             onClick={toggleMenu}
             aria-label="Toggle menu"
@@ -100,9 +127,12 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu - Become Partner butonu mobilde kaldırıldı */}
+      {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-black bg-opacity-95 border-t border-gray-800">
+        <div
+          ref={menuRef}
+          className="md:hidden bg-black bg-opacity-95 border-t border-gray-800"
+        >
           <nav className="flex flex-col py-4 px-4">
             <Link
               href="/#speakers"
