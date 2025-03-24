@@ -43,7 +43,7 @@ const Header = () => {
       <div className="px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="relative w-[180px] sm:w-[150px] h-[40px] sm:h-[50px]">
+          <div className="relative w-[180px] sm:w-[150px] h-[40px] sm:h-[50px] md:ml-0 ml-[-25px]">
             <Image
               src="/images/sepya-logo.png"
               alt="Sepya  Logo"
@@ -68,7 +68,7 @@ const Header = () => {
               PARTNERS
             </Link>
             <Link
-              href="/team"
+              href="/#team"
               className="text-white hover:text-[#00ff9d] transition-colors text-sm lg:text-base"
             >
               TEAM
@@ -88,9 +88,7 @@ const Header = () => {
             target="_blank"
             className="hidden md:block bg-gradient-to-r from-[#00ff9d] to-[#00f0ff] text-black font-semibold px-4 lg:px-6 py-2 rounded-full text-sm lg:text-base hover:scale-105 transition-transform"
           >
-            <button className="hidden md:block bg-gradient-to-r from-[#00ff9d] to-[#00f0ff] text-black font-semibold px-4 lg:px-6 py-2 rounded-full text-sm lg:text-base hover:scale-105 transition-transform">
-              {links.actionButton.title}
-            </button>
+            {links.actionButton.title}
           </Link>
 
           {/* Mobile Menu Button */}
@@ -157,14 +155,15 @@ const Header = () => {
               PARTNERS
             </Link>
             <Link
-              href="/team"
+              href="/#team"
               className="text-white hover:text-[#00ff9d] transition-colors py-3 border-b border-gray-800"
               onClick={() => setMenuOpen(false)}
             >
               TEAM
             </Link>
             <Link
-              href="/venue"
+              href={links.venue}
+              target="_blank"
               className="text-white hover:text-[#00ff9d] transition-colors py-3 border-b border-gray-800"
               onClick={() => setMenuOpen(false)}
             >
