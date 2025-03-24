@@ -10,7 +10,7 @@ const Speakers = () => {
       id: "speaker-1",
       name: "Alex Thompson",
       title: "Blockchain Architect",
-      company: "CryptoLabs",
+
       image: null,
       twitter: "https://twitter.com/alexthompson",
       github: "https://github.com/alexthompson",
@@ -19,7 +19,7 @@ const Speakers = () => {
       id: "speaker-2",
       name: "Sarah Johnson",
       title: "Web3 Developer",
-      company: "Ethereum Foundation",
+
       image: null,
       twitter: "https://twitter.com/sarahjohnson",
       github: "https://github.com/sarahjohnson",
@@ -28,7 +28,7 @@ const Speakers = () => {
       id: "speaker-3",
       name: "Michael Chen",
       title: "Crypto Investment Expert",
-      company: "Digital Assets Fund",
+
       image: null,
       twitter: "https://twitter.com/michaelchen",
       github: "https://github.com/michaelchen",
@@ -37,7 +37,7 @@ const Speakers = () => {
       id: "speaker-4",
       name: "Emily Rodriguez",
       title: "DeFi Researcher",
-      company: "Chain Analysis",
+
       image: null,
       twitter: "https://twitter.com/emilyrodriguez",
       github: "https://github.com/emilyrodriguez",
@@ -46,7 +46,7 @@ const Speakers = () => {
       id: "speaker-5",
       name: "David Kim",
       title: "NFT Specialist",
-      company: "ArtChain",
+
       image: null,
       twitter: "https://twitter.com/davidkim",
       github: "https://github.com/davidkim",
@@ -55,7 +55,7 @@ const Speakers = () => {
       id: "speaker-6",
       name: "Olivia Martinez",
       title: "DAO Governance Expert",
-      company: "DecentralGov",
+
       image: null,
       twitter: "https://twitter.com/oliviamartinez",
       github: "https://github.com/oliviamartinez",
@@ -64,7 +64,7 @@ const Speakers = () => {
       id: "speaker-7",
       name: "James Wilson",
       title: "Crypto Security Advisor",
-      company: "SecureBlocks",
+
       image: null,
       twitter: "https://twitter.com/jameswilson",
       github: "https://github.com/jameswilson",
@@ -73,7 +73,7 @@ const Speakers = () => {
       id: "speaker-8",
       name: "Sophia Lee",
       title: "Metaverse Architect",
-      company: "Virtual Worlds Inc.",
+
       image: null,
       twitter: "https://twitter.com/sophialee",
       github: "https://github.com/sophialee",
@@ -339,9 +339,6 @@ const Speakers = () => {
                   </h3>
                   <p className="text-gray-400 text-sm sm:text-base mt-1">
                     {speaker.title}
-                  </p>
-                  <p className="text-[#00f0ff] text-xs sm:text-sm mt-1 sm:mt-2">
-                    {speaker.company}
                   </p>
 
                   {/* Sosyal Medya İkonları */}

@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import links from "@/lib/links";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -73,7 +74,8 @@ const Header = () => {
               TEAM
             </Link>
             <Link
-              href="/venue"
+              href={links.venue}
+              target="_blank"
               className="text-white hover:text-[#00ff9d] transition-colors text-sm lg:text-base"
             >
               VENUE

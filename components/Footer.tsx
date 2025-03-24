@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import links from "@/lib/links";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,7 +13,11 @@ const Footer = () => {
       links: [
         { name: "About", href: "/#about" },
         { name: "Speakers", href: "/#speakers" },
-        { name: "Venue", href: "/venue" },
+        {
+          name: "Venue",
+          href: links.venue,
+          target: true,
+        },
       ],
     },
     {
@@ -39,7 +44,7 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {/* Logo ve Açıklama */}
           <div className="col-span-2 md:col-span-1">
-            <div className="relative w-[150px] h-[50px] mb-4">
+            <div className="relative w-[220px] h-[70px] mb-4">
               <Image
                 src="/images/Crypto Days.png"
                 alt="Crypto Days Logo"
@@ -47,10 +52,10 @@ const Footer = () => {
                 className="object-contain"
               />
             </div>
-            <p className="text-gray-400 text-sm">
+            {/* <p className="text-gray-400 text-sm">
               Join us for the most innovative blockchain and crypto event of the
               year.
-            </p>
+            </p> */}
           </div>
 
           {/* Footer Linkleri */}
@@ -64,6 +69,7 @@ const Footer = () => {
                   <li key={link.name}>
                     <Link
                       href={link.href}
+                      target={link.target ? "_blank" : undefined}
                       className="text-gray-400 hover:text-[#00ff9d] transition-colors duration-300 text-sm"
                     >
                       {link.name}

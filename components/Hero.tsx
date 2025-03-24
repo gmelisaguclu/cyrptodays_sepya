@@ -1,5 +1,6 @@
 "use client";
 
+import links from "@/lib/links";
 import { useEffect, useRef } from "react";
 
 const Hero = () => {
@@ -134,7 +135,7 @@ const Hero = () => {
 
           <div className="mt-8 md:mt-10 lg:mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-6">
             <button className="bg-gradient-to-r from-[#00ff9d] to-[#00f0ff] text-black font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl text-base sm:text-lg md:text-xl hover:scale-105 transition-transform">
-              Become Partner
+              {links.actionButton.title}
             </button>
 
             <div className="sm:ml-8">
@@ -143,16 +144,16 @@ const Hero = () => {
               </p>
               <div className="flex gap-4">
                 <a
-                  href="#"
+                  href={links.socials.instagram}
                   className="text-gray-400 hover:text-[#00ff9d] transition-colors text-sm sm:text-base"
                 >
                   Instagram
                 </a>
                 <a
-                  href="#"
+                  href={links.socials.twitter}
                   className="text-gray-400 hover:text-[#00ff9d] transition-colors text-sm sm:text-base"
                 >
-                  Twitter
+                  X
                 </a>
               </div>
             </div>
