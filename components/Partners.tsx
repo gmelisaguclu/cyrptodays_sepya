@@ -151,7 +151,7 @@ const Partners = () => {
             {year} PARTNERS
           </h2>
           <p className="text-gray-400 text-base sm:text-lg md:text-xl max-w-3xl mx-auto">
-            Discover the valued collaborators supporting Blockchain Days'
+            Discover the valued collaborators supporting Blockchain Days
             success...
           </p>
         </div>

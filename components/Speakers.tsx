@@ -173,7 +173,7 @@ const Speakers = () => {
       });
 
       // Bağlantıları çiz
-      particles.forEach((p, i) => {
+      particles.forEach((p) => {
         p.connections.forEach((j) => {
           const p2 = particles[j];
           const distance = getDistance(p.x, p.y, p2.x, p2.y);

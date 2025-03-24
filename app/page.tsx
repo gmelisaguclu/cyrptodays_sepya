@@ -5,8 +5,6 @@ import Partners from "@/components/Partners";
 import Speakers from "@/components/Speakers";
 import FAQ from "@/components/FAQ";
 
-import Image from "next/image";
-
 export default function Home() {
   return (
     <main>

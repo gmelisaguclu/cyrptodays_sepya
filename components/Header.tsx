@@ -11,14 +11,6 @@ const Header = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const menuItems = [
-    { label: "HOME", href: "/" },
-    { label: "ABOUT", href: "#about" },
-    { label: "SPEAKERS", href: "/speakers" },
-    { label: "PARTNERS", href: "/partners" },
-    { label: "FAQ", href: "/faq" },
-  ];
-
   return (
     <header className="fixed w-full top-0 left-0 right-0 z-50 bg-black bg-opacity-90 backdrop-blur-sm">
       <div className="px-4 sm:px-6 lg:px-8 py-4">
