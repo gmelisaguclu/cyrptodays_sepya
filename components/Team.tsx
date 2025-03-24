@@ -13,14 +13,17 @@ const Team = () => {
       image: null,
       linkedin: "https://linkedin.com/in/ahmetyilmaz",
       twitter: "https://twitter.com/ahmetyilmaz",
+      telegram: "https://t.me/ahmetyilmaz",
     },
     {
       id: "member-2",
+
       name: "Elif Kaya",
       title: "CTO",
       image: null,
       linkedin: "https://linkedin.com/in/elifkaya",
       twitter: "https://twitter.com/elifkaya",
+      telegram: "https://t.me/elifkaya",
     },
     {
       id: "member-3",
@@ -29,6 +32,7 @@ const Team = () => {
       image: null,
       linkedin: "https://linkedin.com/in/mehmetdemir",
       twitter: "https://twitter.com/mehmetdemir",
+      telegram: "https://t.me/mehmetdemir",
     },
     {
       id: "member-4",
@@ -37,6 +41,7 @@ const Team = () => {
       image: null,
       linkedin: "https://linkedin.com/in/zeynepsahin",
       twitter: "https://twitter.com/zeynepsahin",
+      telegram: "https://t.me/zeynepsahin",
     },
     {
       id: "member-5",
@@ -45,6 +50,7 @@ const Team = () => {
       image: null,
       linkedin: "https://linkedin.com/in/burakozkan",
       twitter: "https://twitter.com/burakozkan",
+      telegram: "https://t.me/burakozkan",
     },
     {
       id: "member-6",
@@ -53,6 +59,7 @@ const Team = () => {
       image: null,
       linkedin: "https://linkedin.com/in/aysetekin",
       twitter: "https://twitter.com/aysetekin",
+      telegram: "https://t.me/aysetekin",
     },
     {
       id: "member-7",
@@ -61,6 +68,7 @@ const Team = () => {
       image: null,
       linkedin: "https://linkedin.com/in/canyildiz",
       twitter: "https://twitter.com/canyildiz",
+      telegram: "https://t.me/canyildiz",
     },
     {
       id: "member-8",
@@ -69,6 +77,7 @@ const Team = () => {
       image: null,
       linkedin: "https://linkedin.com/in/selinarslan",
       twitter: "https://twitter.com/selinarslan",
+      telegram: "https://t.me/selinarslan",
     },
   ];
 
@@ -336,38 +345,63 @@ const Team = () => {
 
                   {/* Sosyal Medya İkonları */}
                   <div className="flex items-center gap-3 mt-auto pt-3">
-                    <a
-                      href={member.twitter}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-300 hover:text-[#00ff9d] transition-colors"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
+                    {member.twitter && (
+                      <a
+                        href={member.twitter}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-300 hover:text-[#00ff9d] transition-colors flex items-center justify-center"
+                        aria-label="Twitter"
                       >
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                      </svg>
-                    </a>
-                    <a
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-300 hover:text-[#00ff9d] transition-colors"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                      </a>
+                    )}
+                    {member.linkedin && (
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-300 hover:text-[#00ff9d] transition-colors flex items-center justify-center"
+                        aria-label="LinkedIn"
                       >
-                        <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 00.1.47V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
-                      </svg>
-                    </a>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 00.1.47V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
+                        </svg>
+                      </a>
+                    )}
+                    {member.telegram && (
+                      <a
+                        href={member.telegram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-300 hover:text-[#00ff9d] transition-colors flex items-center justify-center"
+                        aria-label="Telegram"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.247l-1.932 9.112c-.146.658-.537.818-1.088.508l-3.01-2.212-1.452 1.401c-.16.16-.296.296-.605.296l.216-3.047 5.548-5.009c.24-.213-.054-.333-.373-.121l-6.86 4.32L5.97 12.43c-.649-.203-.66-.649.135-.962l14.053-5.407c.538-.203 1.006.126.825.665z" />
+                        </svg>
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
