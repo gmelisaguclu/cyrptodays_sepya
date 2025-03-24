@@ -213,7 +213,7 @@ const Partners = () => {
 
         {/* Main Sponsor */}
         <div className="mt-12 md:mt-20">
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#00ff9d] to-[#00f0ff] text-center mb-8">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white bg-clip-text  text-center mb-8">
             Main Sponsor
           </h3>
           <div className="border border-gray-800 rounded-xl p-8 md:p-12 lg:p-16 bg-black bg-opacity-60 backdrop-blur-sm transition-transform hover:scale-[1.02] duration-300">
@@ -237,7 +237,7 @@ const Partners = () => {
 
         {/* Diamond Sponsors */}
         <div className="mt-16 md:mt-24">
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#00ff9d] to-[#00f0ff] text-center mb-8">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white bg-clip-text  text-center mb-8">
             Diamond Sponsors
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
@@ -268,7 +268,7 @@ const Partners = () => {
 
         {/* Gold Sponsors */}
         <div className="mt-16 md:mt-24">
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#00ff9d] to-[#00f0ff] text-center mb-8">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold bg-clip-text text-white text-center mb-8">
             Gold Sponsors
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
@@ -299,7 +299,7 @@ const Partners = () => {
 
         {/* Silver Sponsors */}
         <div className="mt-16 md:mt-24">
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#00ff9d] to-[#00f0ff] text-center mb-8">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold  bg-clip-text text-white text-center mb-8">
             Silver Sponsors
           </h3>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
@@ -331,7 +331,7 @@ const Partners = () => {
         {/* Become a Partner Button */}
         <div className="mt-16 md:mt-24 text-center">
           <Link
-            href={links.becomePartner}
+            href={links.becomePartner.link}
             target="_blank"
             className="inline-block bg-gradient-to-r from-[#00ff9d] to-[#00f0ff] text-black font-semibold px-6 py-3 rounded-xl text-base sm:text-lg hover:scale-105 transition-transform"
           >
