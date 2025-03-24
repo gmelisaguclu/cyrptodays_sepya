@@ -118,12 +118,12 @@ const Hero = () => {
               SEPYA
             </h2>
             <h2 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-wider">
-              CYRPTODAYS
+              CRYPTODAYS
             </h2>
           </div>
 
           <p className="text-gray-400 mt-4 md:mt-6 text-base sm:text-lg md:text-xl max-w-2xl">
-            powered by Sepya Blockchain
+            powered by Sepya Network
           </p>
 
           <div className="mt-8 md:mt-12 lg:mt-16 space-y-2">
