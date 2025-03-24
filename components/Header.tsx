@@ -83,9 +83,15 @@ const Header = () => {
           </nav>
 
           {/* Desktop Button - Sadece masaüstünde görünecek */}
-          <button className="hidden md:block bg-gradient-to-r from-[#00ff9d] to-[#00f0ff] text-black font-semibold px-4 lg:px-6 py-2 rounded-full text-sm lg:text-base hover:scale-105 transition-transform">
-            Join the Event
-          </button>
+          <Link
+            href={links.actionButton.link}
+            target="_blank"
+            className="hidden md:block bg-gradient-to-r from-[#00ff9d] to-[#00f0ff] text-black font-semibold px-4 lg:px-6 py-2 rounded-full text-sm lg:text-base hover:scale-105 transition-transform"
+          >
+            <button className="hidden md:block bg-gradient-to-r from-[#00ff9d] to-[#00f0ff] text-black font-semibold px-4 lg:px-6 py-2 rounded-full text-sm lg:text-base hover:scale-105 transition-transform">
+              {links.actionButton.title}
+            </button>
+          </Link>
 
           {/* Mobile Menu Button */}
           <button

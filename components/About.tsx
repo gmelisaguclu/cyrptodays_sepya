@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import links from "@/lib/links";
 
 const About = () => {
   // Canvas referansı
@@ -209,31 +210,8 @@ const About = () => {
 
           <motion.div variants={itemVariants} className="md:w-3/4">
             <p className="text-gray-400 text-base sm:text-lg">
-              Blockchain Days aims to gather different communities and
-              experienced people in one event. Through two days, we will be
-              listening to successful people around the web3 community and
-              building new networks. This will be the largest blockchain event.
-              You can follow our social media for further updates!
+              {links.about.description}
             </p>
-
-            <motion.div
-              variants={itemVariants}
-              className="mt-4 sm:mt-6 md:mt-8 flex justify-end"
-            >
-              <Link
-                href="/details"
-                className="group flex items-center gap-2 text-white hover:text-[#00f0ff] transition-colors"
-              >
-                <span>Learn More</span>
-                <motion.span
-                  className="inline-block"
-                  whileHover={{ x: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  →
-                </motion.span>
-              </Link>
-            </motion.div>
           </motion.div>
         </div>
       </motion.div>

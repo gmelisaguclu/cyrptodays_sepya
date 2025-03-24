@@ -31,8 +31,8 @@ const Footer = () => {
     {
       title: "Social",
       links: [
-        { name: "Twitter", href: "https://twitter.com" },
-        { name: "Instagram", href: "https://instagram.com" },
+        { name: "Twitter", href: links.socials.twitter },
+        { name: "Instagram", href: links.socials.instagram },
         { name: "LinkedIn", href: "https://linkedin.com" },
       ],
     },

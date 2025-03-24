@@ -34,7 +34,6 @@ const FAQ = () => {
 
   // Soru açma/kapama fonksiyonu
   const toggleQuestion = (index: number) => {
-    console.log(index, "index");
     setActiveIndex(activeIndex === index ? null : index);
   };
 
@@ -152,7 +151,7 @@ const FAQ = () => {
           {questions.map((q, index) => (
             <div
               key={q.id}
-              className="border border-gray-800 hover:border-[#00f0ff] rounded-xl bg-black bg-opacity-60 backdrop-blur-sm transition-all duration-300 overflow-hidden relative group"
+              className="border border-gray-800  rounded-xl bg-black bg-opacity-60 backdrop-blur-sm transition-all duration-300 overflow-hidden relative group"
             >
               {/* Soru Başlığı */}
               <button
