@@ -13,8 +13,9 @@ export default function Home() {
       <Hero />
       <About />
       <Speakers />
-      <Team />
+
       <Partners />
+      <Team />
       <FAQ />
     </main>
   );

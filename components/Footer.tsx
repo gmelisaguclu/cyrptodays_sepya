@@ -46,7 +46,7 @@ const Footer = () => {
           <div className="col-span-2 md:col-span-1">
             <div className="relative w-[220px] h-[70px] mb-4">
               <Image
-                src="/images/Crypto Days.png"
+                src="/images/crypto_days.png"
                 alt="Crypto Days Logo"
                 fill
                 className="object-contain"
