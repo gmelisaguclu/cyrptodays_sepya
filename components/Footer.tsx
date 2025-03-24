@@ -24,7 +24,7 @@ const Footer = () => {
       title: "Community",
       links: [
         { name: "Partners", href: "/#partners" },
-        { name: "Team", href: "/team" },
+        { name: "Team", href: "/#team" },
         { name: "FAQ", href: "/#faq" },
       ],
     },
